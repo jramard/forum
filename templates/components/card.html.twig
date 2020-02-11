@@ -1,0 +1,23 @@
+{# Component Variables #}
+{% set card_name = card_name|default('') %}
+{% set card_description = card_description|default('') %}
+{% set card_color = card_color|default('#E5E5E5') %}
+{% set card_img = card_img|default('https://i.imgur.com/Ay32qV0.png') %}
+{% set card_nbPosts = card_nbPosts|default('') %}
+
+<div class="card">
+    <div class="card__infos">
+        <span class="card__infos__color" style="background: {{card_color}}"></span>
+        <div class="card__infos__img">
+            <img src="{{card_img}}" alt="{{card_name}}">
+        </div>
+        <div class="card__infos__description">
+            <h2>{{card_name}}</h2>
+            <p>{{card_description}}</p>
+        </div>
+    </div>
+    <div class="card__details">
+        <span class="card__details__title">Posts</span>
+        <span class="card__details__content">{{card_nbPosts}}</span>
+    </div>
+</div>

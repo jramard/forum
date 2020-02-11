@@ -4,7 +4,7 @@ easy_admin:
     Category:
       class: App\Entity\Category
       new:
-        fields: ['name', 'description']
+        fields: ['name', 'description', 'color', 'image']
     Post:
       class: App\Entity\Post
       list:

@@ -15,7 +15,7 @@
     <div class="categories">
     {% for category in categories %}
         <div class="category">
-            <a href="#">
+            <a href="{{ path('post_category_list', { 'category_id': category.id }) }}">
                 {% include card with {
                     card_name: category.name,
                     card_description: category.description,
@@ -26,6 +26,7 @@
             </a>
         </div>
     {% endfor %}
+    <a class="btn btn-outline-secondary my-5 float-right" href="{{ path('post_list') }}" role="button">Accéder à tous les posts</a>
     </div>
 </div>
 

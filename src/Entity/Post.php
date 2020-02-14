@@ -39,7 +39,7 @@ class Post
 
     public function __construct()
     {
-        $this->createdAt = new \datetime();
+        $this->createdAt = new \DateTime();
     }
 
     public function __toString()
